@@ -1,0 +1,8 @@
+[Unit]
+Description=Fix suspend by disabling GPP0 sleepstate thingie
+
+[Service]
+ExecStart=/bin/bash -c "echo GPP0 >> /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target
