@@ -36,6 +36,7 @@ gnome-extensions disable background-logo@fedorahosted.org && gnome-extensions en
 echo 'KDE Tips'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' && plasma-apply-colorscheme BreezeDark
 sudo dnf rm -y kolourpaint mediawriter okular skanpage kmahjongg kmines kpat akregator firefox kmail ktnef sieveeditor neochat contactprintthemeeditor contactthemeeditor pimdataexporter dragonplayer elisa kamoso korganizer kcharselect kmousetool
+sudo dnf config-manager --set-enabled google-chrome
 sudo dnf in -y transmission-qt google-chrome-stable
       ;;
   esac
