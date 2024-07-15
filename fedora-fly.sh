@@ -29,6 +29,8 @@ sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo fir
 sudo rpmkeys --import https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG && sudo dnf config-manager --add-repo http://repo.yandex.ru/yandex-browser/rpm/stable/x86_64 && sudo dnf in -y yandex-browser-stable #Yandex
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon firefox
 sudo dnf in -y transmission-gtk gnome-tweaks
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub -y com.mattjakeman.ExtensionManager
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
       ;;
@@ -38,6 +40,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' && plasma-apply-co
 sudo dnf rm -y kolourpaint mediawriter okular skanpage kmahjongg kmines kpat akregator firefox kmail ktnef sieveeditor neochat contactprintthemeeditor contactthemeeditor pimdataexporter dragonplayer elisa kamoso korganizer kcharselect kmousetool
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf in -y transmission-qt google-chrome-stable
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
       ;;
   esac
 fi
@@ -45,7 +48,7 @@ fi
 sudo dnf in -y timeshift goverlay steam lutris kdenlive vlc htop redhat-lsb-core inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
 sudo dnf update -y --refresh #Update
 #Flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager portproton net.davidotek.pupgui2
+flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio portproton net.davidotek.pupgui2
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 sudo cp services/wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service #B550 fix
