@@ -28,7 +28,7 @@ sudo dnf copr enable -y trixieua/mutter-patched
 sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp && sudo systemctl restart firewalld.service #GSCONNECT
 sudo rpmkeys --import https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG && sudo dnf config-manager --add-repo http://repo.yandex.ru/yandex-browser/rpm/stable/x86_64 && sudo dnf in -y yandex-browser-stable #Yandex
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon firefox
-sudo dnf in -y transmission-gtk 
+sudo dnf in -y transmission-gtk gnome-tweaks
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
       ;;
@@ -42,7 +42,7 @@ sudo dnf in -y transmission-qt google-chrome-stable
   esac
 fi
 #Install_Apps
-sudo dnf in -y timeshift goverlay steam lutris kdenlive vlc gnome-tweaks htop redhat-lsb-core inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
+sudo dnf in -y timeshift goverlay steam lutris kdenlive vlc htop redhat-lsb-core inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
 sudo dnf update -y --refresh #Update
 #Flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager portproton net.davidotek.pupgui2
