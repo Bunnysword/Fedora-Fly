@@ -36,7 +36,7 @@ gnome-extensions disable background-logo@fedorahosted.org
     KDE)
 echo 'KDE Tips'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' && plasma-apply-colorscheme BreezeDark
-sudo dnf rm -y kolourpaint mediawriter okular skanpage kmahjongg kmines kpat akregator firefox kmail ktnef sieveeditor neochat contactprintthemeeditor contactthemeeditor pimdataexporter dragonplayer elisa kamoso korganizer kcharselect kmousetool
+sudo dnf rm -y kolourpaint mediawriter okular skanpage kmahjongg kmines kpat akregator kmail ktnef sieveeditor neochat contactprintthemeeditor contactthemeeditor pimdataexporter dragonplayer elisa kamoso korganizer kcharselect kmousetool
 sudo dnf in -y transmission-qt
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
       ;;
