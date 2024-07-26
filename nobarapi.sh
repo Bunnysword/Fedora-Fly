@@ -6,7 +6,7 @@ sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf in -y code #VSC
 sudo dnf in -y papirus-icon-theme
-sudo dnf rm -y elisa kmousetool kcharselect kamoso neochat skanpage okular mediawriter 
+sudo dnf rm -y kmousetool kcharselect kamoso neochat skanpage okular mediawriter 
 sudo dnf in -y transmission-qt
 flatpak install flathub -y portproton
 sudo cp services/wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service #B550 fix
