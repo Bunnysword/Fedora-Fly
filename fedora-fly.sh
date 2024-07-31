@@ -51,7 +51,7 @@ flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio por
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 sudo cp services/wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service #B550 fix
 mkdir /home/bunnysword/.config/systemd/ && mkdir /home/bunnysword/.config/systemd/user && mv services/noisetorch.service /home/bunnysword/.config/systemd/user/
-systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch
+#######systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch
 #Other
 mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
 mkdir /home/bunnysword/.config/neofetch && mv conf/config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofetch conf
