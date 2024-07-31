@@ -12,7 +12,7 @@ sudo sed -i "13i exclude=kernel*" /etc/yum.repos.d/fedora-updates.repo && sudo d
 #rm
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon
 #in
-sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi neofetch openrgb piper nvtop
+sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi fastfetch openrgb piper nvtop
 #Update
 sudo dnf update -y --refresh
 #Conf
