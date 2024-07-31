@@ -43,7 +43,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   esac
 fi
 #Install_Apps
-sudo dnf in -y timeshift goverlay steam lutris kdenlive vlc htop redhat-lsb-core inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
+sudo dnf in -y timeshift goverlay steam lutris kdenlive vlc htop redhat-lsb-core inxi fastfetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
 sudo dnf update -y --refresh #Update
 #Flatpak
 flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio portproton net.davidotek.pupgui2
