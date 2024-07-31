@@ -17,7 +17,7 @@ sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi neofetch openrgb pip
 sudo dnf update -y --refresh
 #Conf
 mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
-mkdir /home/bunnysword/.config/neofetch && mv conf/config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofetch conf
+mkdir /home/bunnysword/.config/fastfetch && mv conf/fastfetch.jsonc /home/bunnysword/.config/fastfetch/ && fastfetch #Neofetch conf
 mkdir /home/bunnysword/.config/MangoHud && mv conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
 sudo mv conf/environment /etc
 #NVIDIAMOMENTO
