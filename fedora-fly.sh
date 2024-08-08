@@ -59,7 +59,7 @@ mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config
 mkdir /home/bunnysword/.config/fastfetch && mv conf/config.jsonc /home/bunnysword/.config/fastfetch/ && fastfetch #fastfetch conf
 mkdir /home/bunnysword/.config/MangoHud && mv conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
 sudo mv conf/environment /etc
-git clone https://github.com/JustTemmie/steam-presence && cd steam-presence/ && ./installer.sh && mv conf/config.json steam-presence/ && cd ..
+git clone https://github.com/JustTemmie/steam-presence && mv conf/config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
 ####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
