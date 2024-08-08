@@ -23,6 +23,7 @@ if [ -n "$XDG_CURRENT_DESKTOP" ]; then
   case "$XDG_CURRENT_DESKTOP" in
     GNOME)
 echo 'GNOME Tips'
+sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' && gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 sudo dnf copr enable -y trixieua/mutter-patched
