@@ -16,9 +16,10 @@ sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi fastfetch openrgb pi
 #Update
 sudo dnf update -y --refresh
 #Conf
-mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
-mkdir /home/bunnysword/.config/fastfetch && mv conf/fastfetch.jsonc /home/bunnysword/.config/fastfetch/ && fastfetch #Neofetch conf
-mkdir /home/bunnysword/.config/MangoHud && mv conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
+mkdir ~/.config/OpenRGB && mv conf/1.orp ~/.config/OpenRGB/ #OpenRGB profile
+mkdir ~/.config/fastfetch && mv conf/config.jsonc ~/.config/fastfetch/ && fastfetch #fastfetch conf
+mkdir ~/.config/MangoHud && mv conf/MangoHud.conf ~/.config/MangoHud/ #MangoHud
 sudo mv conf/environment /etc
+mkdir ~/.steam/ && mkdir ~/.steam/steam/ && mv conf/steam_dev.cfg ~/.steam/steam/ #steam tips
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
