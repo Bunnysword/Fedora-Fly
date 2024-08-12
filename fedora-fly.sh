@@ -61,7 +61,7 @@ mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config
 mkdir /home/bunnysword/.config/fastfetch && mv conf/config.jsonc /home/bunnysword/.config/fastfetch/ && fastfetch #fastfetch conf
 mkdir /home/bunnysword/.config/MangoHud && mv conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
 sudo mv conf/environment /etc
-mkdir /home/bunnysword/.steam/steam && mv conf/steam_dev.cfg /home/bunnysword/.steam/steam/ #steam tips
+mkdir /home/bunnysword/.steam/ && mkdir /home/bunnysword/.steam/steam/ && mv conf/steam_dev.cfg /home/bunnysword/.steam/steam/ #steam tips
 git clone https://github.com/JustTemmie/steam-presence && mv conf/config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
