@@ -57,11 +57,11 @@ sudo cp services/wakeup-disable_GPP0.service /etc/systemd/system/ && sudo system
 #######mkdir /home/bunnysword/.config/systemd/ && mkdir /home/bunnysword/.config/systemd/user && mv services/noisetorch.service /home/bunnysword/.config/systemd/user/
 #######systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch
 #Other
-mkdir /home/bunnysword/.config/OpenRGB && mv conf/1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
-mkdir /home/bunnysword/.config/fastfetch && mv conf/config.jsonc /home/bunnysword/.config/fastfetch/ && fastfetch #fastfetch conf
-mkdir /home/bunnysword/.config/MangoHud && mv conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
+mkdir ~/.config/OpenRGB && mv conf/1.orp ~/.config/OpenRGB/ #OpenRGB profile
+mkdir ~/.config/fastfetch && mv conf/config.jsonc ~/.config/fastfetch/ && fastfetch #fastfetch conf
+mkdir ~/.config/MangoHud && mv conf/MangoHud.conf ~/.config/MangoHud/ #MangoHud
 sudo mv conf/environment /etc
-mkdir /home/bunnysword/.steam/ && mkdir /home/bunnysword/.steam/steam/ && mv conf/steam_dev.cfg /home/bunnysword/.steam/steam/ #steam tips
+mkdir ~/.steam/ && mkdir ~/.steam/steam/ && mv conf/steam_dev.cfg ~/.steam/steam/ #steam tips
 git clone https://github.com/JustTemmie/steam-presence && mv conf/config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
