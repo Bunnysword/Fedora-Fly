@@ -53,16 +53,9 @@ flatpak install flathub -y com.obsproject.Studio portproton net.davidotek.pupgui
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 sudo cp services/wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service #B550 fix
-#######noisetorch
 #######mkdir /home/bunnysword/.config/systemd/ && mkdir /home/bunnysword/.config/systemd/user && mv services/noisetorch.service /home/bunnysword/.config/systemd/user/
 #######systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch
-#Other
-mkdir ~/.config/OpenRGB && mv conf/1.orp ~/.config/OpenRGB/ #OpenRGB profile
-mkdir ~/.config/fastfetch && mv conf/config.jsonc ~/.config/fastfetch/ && fastfetch #fastfetch conf
-mkdir ~/.config/MangoHud && mv conf/MangoHud.conf ~/.config/MangoHud/ #MangoHud
-sudo mv conf/environment /etc
-mkdir ~/.steam/ && mkdir ~/.steam/steam/ && mv conf/steam_dev.cfg ~/.steam/steam/ #steam tips
-git clone https://github.com/JustTemmie/steam-presence && mv conf/config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
+chmod 750 conf.sh && ./conf.sh
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
 ####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
