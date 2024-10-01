@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv conf/spoofdpi.desktop ~/.config/autostart/
+mv conf/Spoofdpi.desktop ~/.config/autostart/
 mkdir ~/.config/OpenRGB && mv conf/1.orp ~/.config/OpenRGB/ #OpenRGB profile
 mkdir ~/.config/fastfetch && mv conf/config.jsonc ~/.config/fastfetch/ && fastfetch #fastfetch conf
 mkdir ~/.config/MangoHud && mv conf/MangoHud.conf ~/.config/MangoHud/ #MangoHud
