@@ -12,6 +12,7 @@ elif (( $(echo "$number == 2" | bc -l) )); then
 elif (( $(echo "$number == 3" | bc -l) )); then
     cd .. && rm -rf Fedora-Fly/
     echo Скрипт удалён.
+    cd ..
     exit
 elif (( $(echo "$number == 4" | bc -l) )); then
     echo Ничего не сделано, выход.
