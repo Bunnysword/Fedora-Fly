@@ -5,6 +5,6 @@ git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 75
 ```
 Minimal
 ```
-git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 750 minimal.sh && ./minimal.sh
+git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 750 mini.sh && ./mini.sh
 ```
 ##### Thanks DSergeev & Snappu for help.
