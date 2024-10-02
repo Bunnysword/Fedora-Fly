@@ -36,6 +36,6 @@ flatpak install flathub -y com.obsproject.Studio portproton net.davidotek.pupgui
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 #configurations
-chmod 750 conf.sh && ./configurations.sh
+chmod 750 configurations.sh && ./configurations.sh
 #NVIDIA
 sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
