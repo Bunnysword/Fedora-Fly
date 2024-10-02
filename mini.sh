@@ -16,6 +16,6 @@ sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi fastfetch openrgb pi
 #Update
 sudo dnf update -y --refresh
 #Conf
-chmod 750 conf.sh && ./conf.sh
+chmod 750 conf.sh && ./configurations.sh
 #NVIDIAMOMENTO
 sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
