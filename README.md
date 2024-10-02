@@ -1,10 +1,6 @@
 # Fedora-Fly
 Fedora 40+ GNOME \ KDE Script
 ```
-git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 750 fedora-fly.sh && ./fedora-fly.sh
-```
-Minimal
-```
-git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 750 mini.sh && ./mini.sh
+git clone https://github.com/Bunnysword/Fedora-Fly && cd Fedora-Fly/ && chmod 750 start.sh && ./start.sh
 ```
 ##### Thanks DSergeev & Snappu for help.
