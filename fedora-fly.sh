@@ -54,7 +54,4 @@ flatpak install flathub -y com.obsproject.Studio portproton net.davidotek.pupgui
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 chmod 750 conf.sh && ./conf.sh
 #NVIDIAMOMENTO
-cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
-####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
-####sudo mv conf/90-corectrl.rules /etc/polkit-1/rules.d/ #Corectrl rules for amd
-####sudo mv conf/environment /etc && sudo dmesg | grep BAR= #BAR for amd
+sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
