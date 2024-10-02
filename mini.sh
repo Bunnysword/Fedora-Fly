@@ -18,4 +18,4 @@ sudo dnf update -y --refresh
 #Conf
 chmod 750 conf.sh && ./conf.sh
 #NVIDIAMOMENTO
-cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
+sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
