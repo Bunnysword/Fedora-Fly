@@ -1,5 +1,0 @@
-#Skip Shader Cleanup
-__GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
-
-#for mesa re-size BAR
-#RADV_PERFTEST=sam,nggc
