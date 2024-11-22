@@ -15,7 +15,5 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 sudo dnf in -y goverlay steam vlc htop redhat-lsb-core inxi fastfetch openrgb piper nvtop
 #Update
 sudo dnf update -y --refresh
-#Conf
-chmod 750 configurations.sh && ./configurations.sh
 #NVIDIAMOMENTO
 sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
