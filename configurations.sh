@@ -6,7 +6,7 @@ mkdir ~/.config/fastfetch && wget https://raw.githubusercontent.com/Bunnysword/C
 mkdir ~/.config/MangoHud && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/MangoHud.conf && mv MangoHud.conf ~/.config/MangoHud/
 #mkdir ~/.steam/ ~/.steam/steam/ && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/steam_dev.cfg && mv steam_dev.cfg ~/.steam/steam/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/environment && sudo mv environment /etc
-wget https://raw.githubusercontent.com/Bunnysword/Fedora-Fly/refs/heads/main/nvdriver/nvidia-kms.conf && sudo mv nvidia-kms.conf /etc/modprobe.d/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/nvidia-kms.conf && sudo mv nvidia-kms.conf /etc/modprobe.d/
 
 #Services
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/wakeup-disable_GPP0.service
