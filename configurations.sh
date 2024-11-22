@@ -17,6 +17,6 @@ mkdir ~/.config/systemd/ ~/.config/systemd/user && mv noisetorch.service ~/.conf
 systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch #noisetorch
 
 #Autostart
-mv autostart/  ~/.config && wget https://github.com/xvzc/SpoofDPI/releases/download/v0.12.0/spoofdpi-linux-amd64.tar.gz && tar -xzvf spoofdpi-linux-amd64.tar.gz && sudo mv spoofdpi /usr/local/
-
+mv autostart/  ~/.config 
+#&& wget https://github.com/xvzc/SpoofDPI/releases/download/v0.12.0/spoofdpi-linux-amd64.tar.gz && tar -xzvf spoofdpi-linux-amd64.tar.gz && sudo mv spoofdpi /usr/local/
 #? git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
