@@ -3,7 +3,7 @@
 #configuration dnf
 cd .. && mv Fedora-Fly/ .config/ && cd .config/Fedora-Fly/
 sudo sh -c "echo -e 'fastestmirror=True\nmax_parallel_downloads=10\ndefaultyes=True\nkeepcache=True' >> /etc/dnf/dnf.conf"
-sudo dnf autoremove -y && sudo dnf clean all && sudo dnf in dnf5-plugin-automatic && systemctl enable dnf-automatic.timer
+sudo dnf autoremove -y && sudo dnf clean all && sudo dnf in dnf5-plugin-automatic --allowerasing && systemctl enable dnf-automatic.timer
 #rpmfusion
 sudo dnf in -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf in -y rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
