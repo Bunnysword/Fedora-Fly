@@ -26,7 +26,7 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps
-sudo dnf in -y timeshift goverlay steam kdenlive vlc htop redhat-lsb-core inxi fastfetch openssl discord noisetorch openrgb nvtop transmission-gtk gnome-tweaks code --allowerasing
+sudo dnf in -y timeshift goverlay steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord noisetorch openrgb nvtop transmission-gtk gnome-tweaks code --allowerasing
 sudo dnf update -y --refresh #Update
 #Flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
