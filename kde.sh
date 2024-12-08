@@ -23,3 +23,5 @@ flatpak install flathub -y com.obsproject.Studio portproton net.davidotek.pupgui
 sudo dnf copr enable -y codifryed/CoolerControl && sudo dnf in -y coolercontrol && sudo systemctl enable --now coolercontrold
 #NVIDIA
 sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
+
+chmod 750 configurations.sh && ./configurations.sh
