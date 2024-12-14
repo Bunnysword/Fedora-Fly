@@ -7,7 +7,6 @@ mkdir ~/.config/MangoHud && wget https://raw.githubusercontent.com/Bunnysword/Co
 #mkdir ~/.steam/ ~/.steam/steam/ && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/steam_dev.cfg && mv steam_dev.cfg ~/.steam/steam/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/environment && sudo mv environment /etc
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/nvidia-kms.conf && sudo mv nvidia-kms.conf /etc/modprobe.d/
-wget https://github.com/cucumber-sp/yandex-music-linux/releases/download/v5.29.3/yandex-music*.rpm
 
 #Services
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/wakeup-disable_GPP0.service
