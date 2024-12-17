@@ -12,9 +12,9 @@ wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/wakeup-disable_GPP0.service
 sudo cp wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service
 sudo systemctl start wakeup-disable_GPP0.service #B550 fix
-wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/noisetorch.service
-mv noisetorch.service ~/.config/systemd/user/
-systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch #noisetorch
+#wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/noisetorch.service
+#mv noisetorch.service ~/.config/systemd/user/
+#systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch #noisetorch
 
 #Autostart
 mv autostart/  ~/.config 
