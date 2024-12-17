@@ -13,7 +13,7 @@ sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimed
 sudo dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin && sudo dnf groupupdate -y sound-and-video
 #Other
 #sudo sed -i "13i exclude=kernel*" /etc/yum.repos.d/fedora-updates.repo && sudo dnf copr enable -y sentry/kernel-fsync #Fsync
-sudo dnf copr enable -y principis/NoiseTorch #Noisetorch
+#sudo dnf copr enable -y principis/NoiseTorch #Noisetorch
 sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord Terra
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf in -y papirus-icon-theme #Papirus icons
@@ -25,12 +25,12 @@ sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo fir
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
-#Install_Apps
-sudo dnf in -y timeshift goverlay steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord noisetorch openrgb nvtop transmission-gtk gnome-tweaks code --allowerasing
+#Install_Apps timeshift goverlay  noisetorch 
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord openrgb nvtop transmission-gtk gnome-tweaks code --allowerasing
 sudo dnf update -y --refresh #Update
-#Flatpak
+#Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio portproton net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop
+flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop 
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
