@@ -1,14 +1,14 @@
 #!/bin/bash
 
 echo Добро пожаловать!
-echo 1 - полная настройка. 2 - минимальная настройка. 3 - удалить скрипт. 4 - выход.
+echo 1 - for GNOME. 2 - for KDE. 3 - удалить скрипт. 4 - выход.
 read -p "Введите число: " number
 if (( $(echo "$number == 1" | bc -l) )); then 
-    echo "Выбрана полная настройка."
+    echo "Выбрано "for GNOME"."
     chmod 750 fedora-fly.sh && ./fedora-fly.sh
 elif (( $(echo "$number == 2" | bc -l) )); then 
-    echo "Выбрана минимальная настройка"
-    chmod 750 mini.sh && ./mini.sh
+    echo "Выбрана "for KDE"."
+    chmod 750 mini.sh && ./kde.sh
 elif (( $(echo "$number == 3" | bc -l) )); then
     cd .. && rm -rf Fedora-Fly/
     echo Скрипт удалён.
