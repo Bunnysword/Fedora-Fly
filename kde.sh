@@ -18,7 +18,7 @@ sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch o
 sudo dnf update -y --refresh
 #flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop dev.vencord.Vesktop
+flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 org.telegram.desktop dev.vencord.Vesktop
 #disableservices
 sudo systemctl mask plymouth-quit-wait.service
 systemctl disable rpcbind.service
