@@ -12,11 +12,11 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 #repos
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf copr enable -y codifryed/CoolerControl
-sudo dnf copr enable bieszczaders/kernel-cachyos
+sudo dnf copr enable -y bieszczaders/kernel-cachyos
 #appinstall
 sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openrgb nvtop transmission-qt code coolercontrol ffmpeg --allowerasing
 #update
-sudo dnf install kernel-cachyos kernel-cachyos-devel-matched
+sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo dnf update -y --refresh
 #flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -26,4 +26,4 @@ sudo systemctl mask plymouth-quit-wait.service
 systemctl disable rpcbind.service
 systemctl disable NetworkManager-wait-online.service
 #nvidiadriver
-sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
+sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
