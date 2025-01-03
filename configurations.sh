@@ -9,7 +9,7 @@ wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/nvidia-kms.conf && sudo mv nvidia-kms.conf /etc/modprobe.d/
 mkdir -p ~/.config/pipewire/pipewire.conf.d && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/10-no-resampling.conf && mv 10-no-resampling.conf ~/.config/pipewire/pipewire.conf.d/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/10-sound.conf && mv 10-sound.conf ~/.config/pipewire/pipewire.conf.d/
-
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/.bash_profile && mv ~/
 
 #Services
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/wakeup-disable_GPP0.service
