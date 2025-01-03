@@ -13,6 +13,7 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf copr enable -y codifryed/CoolerControl
 sudo dnf copr enable -y trixieua/mutter-patched
+sudo dnf copr enable bieszczaders/kernel-cachyos
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
 sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
@@ -26,6 +27,7 @@ gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps timeshift goverlay noisetorch 
 sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord openrgb nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol --allowerasing
 #Update
+sudo dnf install kernel-cachyos kernel-cachyos-devel-matched
 sudo dnf update -y --refresh 
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
