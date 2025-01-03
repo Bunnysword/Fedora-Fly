@@ -9,33 +9,30 @@ sudo dnf in -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 sudo dnf in -y rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
 #Codec and multimedia groups
 sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
-sudo dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin && sudo dnf groupupdate -y sound-and-video
-#Other
-#sudo sed -i "13i exclude=kernel*" /etc/yum.repos.d/fedora-updates.repo && sudo dnf copr enable -y sentry/kernel-fsync #Fsync
-#sudo dnf copr enable -y principis/NoiseTorch #Noisetorch
-sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord Terra
+#repos
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+sudo dnf copr enable -y codifryed/CoolerControl
+sudo dnf copr enable -y trixieua/mutter-patched
+#
 sudo dnf in -y papirus-icon-theme #Papirus icons
 sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' && gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
-sudo dnf copr enable -y trixieua/mutter-patched
 sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp && sudo systemctl restart firewalld.service #GSCONNECT
+#rmapp
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
-#Install_Apps timeshift goverlay  noisetorch 
-sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord openrgb nvtop transmission-gtk gnome-tweaks code --allowerasing
-sudo dnf update -y --refresh #Update
+#Install_Apps timeshift goverlay noisetorch 
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord openrgb nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol --allowerasing
+#Update
+sudo dnf update -y --refresh 
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop 
+flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop dev.vencord.Vesktop
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
 systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service && systemctl --user mask org.gnome.SettingsDaemon.Sharing.service && systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
-#coolercontrol
-sudo dnf copr enable -y codifryed/CoolerControl && sudo dnf in -y coolercontrol && sudo systemctl enable --now coolercontrold
 #NVIDIA
 sudo dnf in akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
