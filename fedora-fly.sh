@@ -16,7 +16,7 @@ sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable bieszczaders/kernel-cachyos
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
-sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
+sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bsword" /etc/gdm/custom.conf #autologin in GDM
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' && gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp && sudo systemctl restart firewalld.service #GSCONNECT
