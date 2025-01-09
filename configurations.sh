@@ -16,14 +16,8 @@ wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/servi
 sudo cp wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service
 sudo systemctl start wakeup-disable_GPP0.service #B550 fix
 
-#wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/noisetorch.service
-#mv noisetorch.service ~/.config/systemd/user/
-#systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl --user enable noisetorch #noisetorch
-
 #Autostart
 mv autostart/  ~/.config 
-#&& wget https://github.com/xvzc/SpoofDPI/releases/download/v0.12.0/spoofdpi-linux-amd64.tar.gz && tar -xzvf spoofdpi-linux-amd64.tar.gz && sudo mv spoofdpi /usr/local/
-#? git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 
 #zapret
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/zapretcon/zapret.sh && chmod zapret.sh && ./zapret.sh
