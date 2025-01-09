@@ -8,7 +8,7 @@ if (( $(echo "$number == 1" | bc -l) )); then
     chmod 750 fedora-fly.sh && ./fedora-fly.sh
 elif (( $(echo "$number == 2" | bc -l) )); then 
     echo "Выбрана "for KDE"."
-    chmod 750 mini.sh && ./kde.sh
+    chmod 750 kde.sh && ./kde.sh
 elif (( $(echo "$number == 3" | bc -l) )); then
     cd .. && rm -rf Fedora-Fly/
     echo Скрипт удалён.
