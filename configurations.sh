@@ -20,4 +20,4 @@ sudo systemctl start wakeup-disable_GPP0.service #B550 fix
 mv autostart/  ~/.config 
 
 #zapret
-wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/zapretcon/zapret.sh && chmod zapret.sh && ./zapret.sh
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/zapretcon/zapret.sh && chmod 750 zapret.sh && ./zapret.sh
