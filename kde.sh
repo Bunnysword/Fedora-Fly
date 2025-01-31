@@ -26,4 +26,6 @@ sudo systemctl mask plymouth-quit-wait.service
 systemctl disable rpcbind.service
 systemctl disable NetworkManager-wait-online.service
 #nvidiadriver
-sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
+sudo dnf in rpmfusion-nonfree-release-rawhide
+sudo dnf --enablerepo=rpmfusion-nonfree-rawhide in akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686
+#sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
