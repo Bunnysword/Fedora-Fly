@@ -16,7 +16,7 @@ sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
-sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bsword" /etc/gdm/custom.conf #autologin in GDM
+sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' && gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp && sudo systemctl restart firewalld.service #GSCONNECT
@@ -31,7 +31,7 @@ sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo dnf update -y --refresh 
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop dev.vencord.Vesktop
+flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
