@@ -29,6 +29,7 @@ sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch o
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo dnf update -y --refresh 
+chsh -s $(which fish)
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 com.mattjakeman.ExtensionManager org.telegram.desktop
