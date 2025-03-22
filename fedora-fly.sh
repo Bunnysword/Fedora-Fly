@@ -14,6 +14,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "
 sudo dnf copr enable -y codifryed/CoolerControl
 sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
+dnf copr enable lizardbyte/stable
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
 sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
