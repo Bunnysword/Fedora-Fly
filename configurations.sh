@@ -11,6 +11,9 @@ mkdir -p ~/.config/pipewire/pipewire.conf.d && wget https://raw.githubuserconten
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/10-sound.conf && mv 10-sound.conf ~/.config/pipewire/pipewire.conf.d/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/.bash_profile && mv .bash_profile ~/
 
+mkdir ~/.config/fish && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/config.fish && mv config.fish ~/.config/fish/
+mkdir ~/.config/fish/functions/ && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/fish_prompt.fish && mv fish_prompt.fish ~/.config/fish/functions/
+
 #Services
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/services/wakeup-disable_GPP0.service
 sudo cp wakeup-disable_GPP0.service /etc/systemd/system/ && sudo systemctl enable wakeup-disable_GPP0.service
