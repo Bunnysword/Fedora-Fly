@@ -39,3 +39,4 @@ systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user
 systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service && systemctl --user mask org.gnome.SettingsDaemon.Sharing.service && systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 #NVIDIA
 sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
+sudo grubby --args="rd.driver.blacklist=nouveau" --update-kernel=ALL
