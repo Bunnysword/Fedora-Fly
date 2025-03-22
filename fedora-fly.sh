@@ -29,6 +29,7 @@ gnome-extensions disable background-logo@fedorahosted.org
 sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord openrgb nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
+sudo grubby --set-default /boot/vmlinuz*cachyos*
 sudo dnf update -y --refresh 
 chsh -s $(which fish)
 #Flatpak portproton
