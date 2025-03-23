@@ -14,7 +14,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "
 sudo dnf copr enable -y codifryed/CoolerControl
 sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
-dnf copr enable lizardbyte/stable
+sudo dnf copr enable -y lizardbyte/stable
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
 sudo sed -i "6i AutomaticLoginEnable=True\nAutomaticLogin=bunnysword" /etc/gdm/custom.conf #autologin in GDM
@@ -26,7 +26,7 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps timeshift goverlay noisetorch openrgb
-sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish --allowerasing
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish sunshine --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
