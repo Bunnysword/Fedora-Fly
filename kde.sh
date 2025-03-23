@@ -32,3 +32,10 @@ sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cu
 #conf for kde
 mkdir ~/.config/fastfetch && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/config.jsonc && mv config.jsonc ~/.config/fastfetch/
 wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/bugs.png && mv bugs.png ~/.config/fastfetch/
+mkdir ~/.local/share/color-schemes
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/SwordScheme.colors && mv SwordScheme.colors ~/.local/share/color-schemes/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/swordprofile.profile && mv swordprofile.profile ~/.local/share/konsole/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/WhiteOnBlack.colorscheme && mv WhiteOnBlack.colorscheme ~/.local/share/konsole/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/kcm-about-distrorc && mv kcm-about-distrorc ~/.config/kdedefaults/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/bugs.png && mv bugs.png ~/.config/kdedefaults/
+plasma-apply-colorscheme SwordScheme
