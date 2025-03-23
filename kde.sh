@@ -27,5 +27,8 @@ systemctl disable rpcbind.service
 systemctl disable NetworkManager-wait-online.service
 #nvidiadriver
 sudo dnf in rpmfusion-nonfree-release-rawhide
-sudo dnf --enablerepo=rpmfusion-nonfree-rawhide in akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
-#sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
+sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
+
+#conf for kde
+mkdir ~/.config/fastfetch && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/config.jsonc && mv config.jsonc ~/.config/fastfetch/
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/kde/bugs.png && mv bugs.png ~/.config/fastfetch/
