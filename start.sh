@@ -22,6 +22,7 @@ else
 fi
 
 echo Конфигурация всех файлов.
+wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/configurations.sh
 chmod 750 configurations.sh && ./configurations.sh
 
 echo Всё готово.
