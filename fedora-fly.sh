@@ -42,3 +42,7 @@ systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service && systemct
 #NVIDIA
 sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
 sudo grubby --args="rd.driver.blacklist=nouveau" --update-kernel=ALL
+
+#conf for gnome
+mkdir ~/.config/fastfetch && wget https://raw.githubusercontent.com/Bunnysword/Confiles/refs/heads/main/conf/fedora-gnome/config.jsonc && mv config.jsonc ~/.config/fastfetch/
+
