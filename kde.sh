@@ -14,16 +14,17 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "
 sudo dnf copr enable -y codifryed/CoolerControl
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
 sudo dnf copr enable -y lizardbyte/stable
+sudo dnf copr enable -y apicalshark/ProtonUp-Qt
 
 #appinstall
-sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openrgb nvtop transmission-qt code coolercontrol ffmpeg fish sunshine --allowerasing
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openrgb nvtop transmission-qt code coolercontrol ffmpeg fish sunshine protonup-qt --allowerasing
 #update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
 sudo dnf update -y --refresh
 #flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio net.davidotek.pupgui2 org.telegram.desktop
+flatpak install flathub -y com.obsproject.Studio org.telegram.desktop
 #disableservices
 sudo systemctl mask plymouth-quit-wait.service
 systemctl disable rpcbind.service
