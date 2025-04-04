@@ -28,7 +28,7 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps timeshift goverlay noisetorch openrgb
-sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish sunshine extension-manager protonup-qt --allowerasing
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish sunshine extension-manager protonup-qt libavcodec-freeworld --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
@@ -42,7 +42,7 @@ sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
 systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service && systemctl --user mask org.gnome.SettingsDaemon.Sharing.service && systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 #NVIDIA
-sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver
+sudo dnf in -y akmod-nvidia xorg-x11-drv-nvidia-libs.i686 xorg-x11-drv-nvidia-cuda-libs.i686 nvidia-vaapi-driver xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-cuda-libs
 sudo grubby --args="rd.driver.blacklist=nouveau" --update-kernel=ALL
 
 #conf for gnome
