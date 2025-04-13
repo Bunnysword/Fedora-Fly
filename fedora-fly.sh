@@ -12,10 +12,11 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 #repos
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf copr enable -y codifryed/CoolerControl
+sudo dnf copr enable -y agonie/Refine
 #sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
 sudo dnf copr enable -y lizardbyte/stable
-sudo dnf copr enable -y umutd3401/extension-manager
+#sudo dnf copr enable -y umutd3401/extension-manager
 sudo dnf copr enable -y apicalshark/ProtonUp-Qt
 #
 sudo dnf in -y papirus-icon-theme #Papirus icons
@@ -28,7 +29,7 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps timeshift goverlay noisetorch openrgb
-sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish sunshine extension-manager protonup-qt libavcodec-freeworld --allowerasing
+sudo dnf in -y mangohud steam kdenlive mpv htop redhat-lsb-core inxi fastfetch openssl discord nvtop transmission-gtk gnome-tweaks code ffmpeg coolercontrol fish sunshine extension-manager protonup-qt libavcodec-freeworld refine --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
