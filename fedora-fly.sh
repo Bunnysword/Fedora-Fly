@@ -12,7 +12,7 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 #repos
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf copr enable -y codifryed/CoolerControl
-sudo dnf copr enable -y agonie/Refine
+#sudo dnf copr enable -y agonie/Refine
 #sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
 sudo dnf copr enable -y lizardbyte/stable
@@ -37,7 +37,7 @@ sudo dnf update -y --refresh
 chsh -s $(which fish)
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y com.obsproject.Studio org.telegram.desktop
+flatpak install flathub -y com.obsproject.Studio org.telegram.desktop page.tesk.Refine
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
