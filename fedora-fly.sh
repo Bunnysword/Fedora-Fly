@@ -29,7 +29,7 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
 #Install_Apps timeshift goverlay noisetorch openrgb | code redhat-lsb-core gnome-tweaks sunshine refine
-sudo dnf in -y mangohud steam kdenlive mpv htop inxi fastfetch openssl discord nvtop transmission-gtk ffmpeg coolercontrol fish protonup-qt libavcodec-freeworld --allowerasing
+sudo dnf in -y mangohud steam kdenlive mpv htop inxi fastfetch openssl discord nvtop transmission-gtk ffmpeg coolercontrol fish protonup-qt libavcodec-freeworld adw-gtk3-theme --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
