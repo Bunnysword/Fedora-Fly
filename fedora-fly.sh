@@ -15,7 +15,7 @@ sudo dnf copr enable -y codifryed/CoolerControl
 #sudo dnf copr enable -y agonie/Refine
 #sudo dnf copr enable -y trixieua/mutter-patched
 sudo dnf copr enable -y bieszczaders/kernel-cachyos
-sudo dnf copr enable -y lizardbyte/stable
+#sudo dnf copr enable -y lizardbyte/stable
 #sudo dnf copr enable -y umutd3401/extension-manager
 sudo dnf copr enable -y apicalshark/ProtonUp-Qt
 #
