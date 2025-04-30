@@ -29,8 +29,8 @@ sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo fir
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice*
 #EXTENSIONS
 gnome-extensions disable background-logo@fedorahosted.org
-#Install_Apps timeshift goverlay noisetorch openrgb | code redhat-lsb-core gnome-tweaks refine libavcodec-freeworld sunshine openssl
-sudo dnf in -y mangohud steam kdenlive mpv htop inxi fastfetch discord nvtop transmission-gtk ffmpeg coolercontrol fish protonup-qt adw-gtk3-theme --allowerasing
+#Install_Apps timeshift goverlay noisetorch openrgb | redhat-lsb-core gnome-tweaks refine libavcodec-freeworld sunshine openssl
+sudo dnf in -y mangohud steam kdenlive mpv htop inxi fastfetch discord nvtop transmission-gtk ffmpeg coolercontrol fish protonup-qt adw-gtk3-theme code --allowerasing
 #Update
 sudo dnf install -y kernel-cachyos kernel-cachyos-devel-matched
 sudo grubby --set-default /boot/vmlinuz*cachyos*
