@@ -39,8 +39,8 @@ chsh -s $(which fish)
 #Flatpak portproton
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub -y com.obsproject.Studio org.telegram.desktop page.tesk.Refine space.rirusha.Cassette
-#Services
-sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
+#Services && systemctl disable livesys-late.service && systemctl disable lvm2-monitor.service
+sudo systemctl mask plymouth-quit-wait.service && systemctl disable rpcbind.service && systemctl disable NetworkManager-wait-online.service #Disable
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service && systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service && systemctl --user mask org.gnome.SettingsDaemon.Color.service && systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
 systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service && systemctl --user mask org.gnome.SettingsDaemon.Sharing.service && systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 #NVIDIA
